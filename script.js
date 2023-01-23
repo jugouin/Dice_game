@@ -3,6 +3,17 @@ let currentScore = 0;
 let P1globalScore = 0;
 let P2globalScore = 0;
 
+
+function ActiveCircle () {
+    const circle = document.getElementsByClassName("circle");
+    if (activePlayer === 1) {
+        circle.className = "active";
+    }
+    else {
+        circle.className = "active";
+    }
+}
+
 function newGame(){
     activePlayer = 1;
     currentScore = 0;
@@ -52,12 +63,22 @@ function hold(){
     switchPlayer();
 }
 
+
 function switchPlayer(){
+
+    let player1 = document.getElementById('P1');
+    let player2 = document.getElementById('P2');
+    
+
     if (activePlayer === 1){
         activePlayer = 2; 
+        player2.innerText =`circle`;
+        player1.innerHTML = "";
     }
     else {
         activePlayer = 1;
+        player1.innerText =`circle`;
+        player2.innerHTML = "";
     }
 }
 
@@ -71,5 +92,3 @@ function dice(){
     getHtmlDice.innerHTML = `<div class="dice" id="${diceNumber}">
             <img style="height: 100%" src="Dice/dice-${diceNumber}.png"></img></div>`;
 }
-
-

@@ -1,5 +1,4 @@
 body {
-    background: linear-gradient(90deg, #f0f0f0 50%, #ffffff 50%);
     font-weight: 100;
     color: lightslategrey;
 }
@@ -9,29 +8,46 @@ body {
     grid-template-columns: 35%, auto, 35%;
     grid-auto-flow: column;
 }
+
+.boxP1 {
+    background: #f0f0f0;
+    width: 50vw;
+    height: 100vh;
+}
+
+.boxP2 {
+    background: #ffffff;
+    width: 50vw;
+    height: 100vh;
+}
+
 .board {
     display: flex;
     flex-direction: column;
     justify-content: space-between;
+    width: 70%;
+    font-size: 40px;
 }
 
 .tableGame {
-    font-size: xx-large;
-    position: relative;
+   
     top: 10%;
     align-self: center;
 }
 
 .player {
-    min-width: 210px;
-    font-size: 43px;
+    display: flex;
+    justify-content: space-between;
+    width: 20%;
+    min-width: 230px;
+    font-size: 1em;
     letter-spacing: 0.1em;
 }
 
 .score {
     display: flex;
     justify-content: center;
-    font-size: 96px;
+    font-size: 3em;
     color: rgb(243, 17, 66);
 }
 
@@ -49,14 +65,14 @@ body {
 .current {
     display: flex;
     justify-content: center;
-    font-size: small;
+    font-size: 0.6em;
 }
 
 .currentScore {
     color: white;
     display: flex;
     justify-content: center;
-    font-size: 36px;
+    font-size: 0.8em;
 }
 
 .btnNewGame {
@@ -95,5 +111,35 @@ body {
     'FILL' 0,
     'wght' 100,
     'GRAD' 0,
-    'opsz' 48
+    'opsz' 48;
+}
+
+.circle {
+    font-size: 1em;
+    font-variation-settings:
+    'FILL' 1,
+    'wght' 100,
+    'GRAD' 0,
+    'opsz' 48;
+    
+}
+
+@media screen and (max-width: 900px) and (orientation: landscape) {
+    .boxP1 {
+        background: #f0f0f0;
+        width: 50vw;
+    }
+    .boxP2 {
+        background: #ffffff;
+        width: 50vw;
+    }
+    
+    .board {
+        font-size: 15px;
+    }
+    .player {
+        margin-left: 10px;
+        min-width: 110px;
+    }
+    
 }
